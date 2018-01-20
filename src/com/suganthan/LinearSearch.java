@@ -1,3 +1,5 @@
+package com.suganthan;
+
 public class LinearSearch {
     public static void main(String[] args) {
         int[] arr = {9, 7, 6, 15, 16, 5, 10, 11};
