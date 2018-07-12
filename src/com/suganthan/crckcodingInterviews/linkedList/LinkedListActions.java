@@ -12,20 +12,22 @@ public class LinkedListActions {
 
     public void setUp() {
         LinkedListActions actions = new LinkedListActions();
-        actions.addElement(1);
-        actions.addElement(2);
         actions.addElement(3);
-        actions.addElement(4);
         actions.addElement(5);
-        actions.addElement(6);
-        actions.addElement(7);
         actions.addElement(8);
-        actions.addElement(9);
+        actions.addElement(5);
+        actions.addElement(10);
+        actions.addElement(2);
+        actions.addElement(1);
+        //actions.addElement(8);
+        //actions.addElement(9);
         actions.display();
         //actions.removeDupsMtd2();
         //System.out.println("\n*************After removing the duplicates************");
         //actions.display();
-        actions.nthToLast(3);
+        //actions.nthToLast(3);
+        //actions.deleteNode(null);
+        actions.partition(5);
     }
     public void addElement(int elements) {
         Node node = new Node(elements);
@@ -88,6 +90,11 @@ public class LinkedListActions {
         }
     }
 
+    /**
+     * This algorithm takes O(n) time and O(1) space.
+     * @param k
+     * @return
+     */
     Node nthToLast(int k) {
         Node p1 = head;
         Node p2 = head;
@@ -103,6 +110,43 @@ public class LinkedListActions {
         return p2;
     }
 
+    /**
+     *
+     * @return
+     */
+    boolean deleteNode(Node node) {
+        if (node == null || node.getNext()==null)
+            return false;
+        Node nextNode = node.getNext();
+        node.setValue(nextNode.getValue());
+        node.setNext(nextNode.getNext());
+        return false;
+    }
+
+    /**
+     *
+     * @return
+     */
+    Node partition(int x) {
+        Node temp = head;
+        Node lesserThan = temp;
+        Node greaterThan = temp;
+
+        while (temp != null) {
+            if (temp.getValue() < x ) {
+                temp.setNext(lesserThan);
+                lesserThan = temp;
+            } else {
+                greaterThan.setNext(temp);
+                greaterThan = temp;
+            }
+            Node next = temp.getNext();
+            temp = next;
+        }
+        greaterThan.setNext(null);
+        return lesserThan;
+
+    }
 
     public Node getHead() {
         return head;
