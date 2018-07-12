@@ -17,7 +17,7 @@ public class MergeSort {
             int m = (l+r)/2;
             sort(arr, l, m);
             sort(arr, m+1, r);
-            merge(arr, l, m, r);
+                merge(arr, l, m, r);
         }
     }
 
