@@ -142,6 +142,14 @@ public class DirectedGraph extends AbstractGraph {
         return Collections.<Integer>unmodifiableSet(childMap.keySet());
     }
 
+    public Map<Integer, Map<Integer, Double>> getParentMap() {
+        return parentMap;
+    }
+
+    public Map<Integer, Map<Integer, Double>> getChildMap() {
+        return childMap;
+    }
+
     @Override
     public void clear() {
         childMap.clear();
