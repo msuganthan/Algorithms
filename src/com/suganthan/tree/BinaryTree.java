@@ -3,14 +3,16 @@ package com.suganthan.tree;
 /**
  * Created by msuganthan on 21/7/18.
  */
-public class TreeNode {
+public class BinaryTree {
 
     private int value;
-    private TreeNode leftNode;
-    private TreeNode rightNode;
+    private BinaryTree leftNode;
+    private BinaryTree rightNode;
 
-    public TreeNode(int value) {
+    public BinaryTree(int value) {
         this.value = value;
+        this.leftNode = null;
+        this.rightNode = null;
     }
 
     public int getValue() {
@@ -21,19 +23,19 @@ public class TreeNode {
         this.value = value;
     }
 
-    public TreeNode getLeftNode() {
+    public BinaryTree getLeftNode() {
         return leftNode;
     }
 
-    public void setLeftNode(TreeNode leftNode) {
+    public void setLeftNode(BinaryTree leftNode) {
         this.leftNode = leftNode;
     }
 
-    public TreeNode getRightNode() {
+    public BinaryTree getRightNode() {
         return rightNode;
     }
 
-    public void setRightNode(TreeNode rightNode) {
+    public void setRightNode(BinaryTree rightNode) {
         this.rightNode = rightNode;
     }
 }
