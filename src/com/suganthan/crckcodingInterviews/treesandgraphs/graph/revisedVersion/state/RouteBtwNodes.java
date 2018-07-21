@@ -12,7 +12,7 @@ public class RouteBtwNodes {
         Graph graph = Graph.createGraph();
         Node[] nodes = graph.getVertices();
         Node start = nodes[3];
-        Node end = nodes[2];
+        Node end = nodes[5];
         System.out.println(search(graph, start, end));
     }
 
