@@ -129,6 +129,25 @@ public class TreeOperations {
         }
     }
 
+    public void spiralOrderTraversal() {
+        Stack<Tree> stack = new Stack<>();
+        stack.push(root);
+        while (!stack.isEmpty()) {
+            Tree temp = stack.peek();
+            stack.pop();
+
+            System.out.print(temp.getValue() + " ");
+
+            if (temp.getLeft() != null) {
+                stack.push(temp.getLeft());
+            }
+
+            if (temp.getRight() != null) {
+                stack.push(temp.getRight());
+            }
+        }
+    }
+
     public Tree getRoot() {
         return root;
     }
