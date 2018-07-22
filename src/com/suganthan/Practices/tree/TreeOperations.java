@@ -1,5 +1,11 @@
 package com.suganthan.Practices.tree;
 
+import com.suganthan.crckcodingInterviews.treesandgraphs.graph.revisedVersion.state.Node;
+
+import java.util.LinkedList;
+import java.util.Queue;
+import java.util.Stack;
+
 /**
  * Created by msuganthan on 21/7/18.
  */
@@ -42,10 +48,85 @@ public class TreeOperations {
     }
 
     private int height(Tree node) {
+
         if (node == null)
             return 0;
-
         return Math.max(height(node.getLeft()), height(node.getRight())) + 1;
+    }
+
+    public void inorder() {
+        inorder(root);
+    }
+
+    public void inorder(Tree node) {
+        if (node == null)
+            return;
+        inorder(node.getLeft());
+        System.out.println(node.getValue());
+        inorder(node.getRight());
+    }
+
+    public void preorder() {
+        preorder(root);
+    }
+
+    public void preorder(Tree node) {
+        if (node == null)
+            return;
+        System.out.println(node.getValue());
+        inorder(node.getLeft());
+        inorder(node.getRight());
+    }
+
+    public void postorder() {
+        postorder(root);
+    }
+
+    public void postorder(Tree node) {
+        if (node == null)
+            return;
+        inorder(node.getLeft());
+        inorder(node.getRight());
+        System.out.println(node.getValue());
+    }
+
+    public void levelOrder() {
+        Queue<Tree> queue = new LinkedList<>();
+        queue.add(root);
+
+        while (!queue.isEmpty()) {
+            Tree tempNode = queue.poll();
+            System.out.print(tempNode.getValue() + " ");
+
+            if (tempNode.getLeft() != null)
+                queue.add(tempNode.getLeft());
+
+            if (tempNode.getRight() != null)
+                queue.add(tempNode.getRight());
+        }
+    }
+
+    public void reverseLevelOrder() {
+        Queue<Tree> queue = new LinkedList<>();
+        Stack<Tree> stack = new Stack<>();
+        queue.add(root);
+
+        while (!queue.isEmpty()) {
+            Tree tempNode = queue.poll();
+            stack.push(tempNode);
+
+            if (tempNode.getLeft() != null)
+                queue.add(tempNode.getLeft());
+
+            if (tempNode.getRight() != null)
+                queue.add(tempNode.getRight());
+        }
+
+        while (stack.empty() == false) {
+            Tree temp = stack.peek();
+            System.out.print(temp.getValue() + " ");
+            stack.pop();
+        }
     }
 
     public Tree getRoot() {
