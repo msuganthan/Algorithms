@@ -7,7 +7,6 @@ public class ChangeCase {
     public static void main(String[] args) {
         for (int i = 0; i < 10000000; i++) {
             for (char ch='A'; ch <= 'Z'; ch++) {
-                String.to
                 System.out.println(Character.toChars(ch | ' '));
             }
         }
