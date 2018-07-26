@@ -1,0 +1,17 @@
+1. Check if an given integer is even or odd
+    The expression (n&1) will return value 1 or 0
+    depending upon n is odd or even.
+
+    1st example
+
+        16 --> 10000  &
+        1  --> 00001
+            -----------
+               00000
+    2nd example
+        17 --> 10001  &
+        1  --> 00001
+            ------------
+               00001
+
+    
