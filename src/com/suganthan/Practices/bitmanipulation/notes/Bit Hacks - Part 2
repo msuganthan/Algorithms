@@ -1,0 +1,5 @@
+1. Turn off kth bit in a number
+
+    Web answer is n & ~(1 << k- 1).
+
+    For me: n ^ 1 << k - 1 will also work
