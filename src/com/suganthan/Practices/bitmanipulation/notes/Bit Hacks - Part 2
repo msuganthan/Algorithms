@@ -2,4 +2,16 @@
 
     Web answer is n & ~(1 << k- 1).
 
-    For me: n ^ 1 << k - 1 will also work
+    For me: n ^ (1 << (k - 1)) will also work
+
+2. Turn on kth bit in a number.
+
+    n | (1 << k- 1) will do
+
+3. Check if k'th bit is set for a number.
+
+    (1 << (k - 1))  will help here
+
+4. Toggle the kth bit
+
+    (1 << (k - 1))  will help here
