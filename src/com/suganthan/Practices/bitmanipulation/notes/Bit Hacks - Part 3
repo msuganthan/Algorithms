@@ -1,0 +1,20 @@
+1. How to unset the rightmost set bit of a number
+
+    n & (n-1)
+
+2. Check if the given integer is a power of 2 without using any branching or loop.
+
+    n & (n-1) is the web answer but my gut feeling is
+    n & 1 will also work
+
+3. Find position of the rightmost set bit
+
+        (n & (n-1)) ^ n
+
+4. Find position of the only set bit in a number
+
+        (n & (n-1))
+
+        and
+
+        log(number)
