@@ -1,0 +1,23 @@
+1. Convert uppercase character to lowercase
+
+        for(char ch='A'; ch <= 'Z'; ch++)
+            ch | ' '
+
+2. Convert lowercase character to uppercase
+
+        for(char ch='a'; ch <= 'z'; ch++)
+            ch & '_'
+
+3. Invert alphabet
+
+        for(char ch='a'; ch <= 'z'; ch++)
+            ch ^ ' '
+
+        for(char ch='A'; ch <= 'Z'; ch++)
+            ch ^ ' '
+
+4. Find letter's position in alphabet
+
+        A & 31
+        c & 31
+
