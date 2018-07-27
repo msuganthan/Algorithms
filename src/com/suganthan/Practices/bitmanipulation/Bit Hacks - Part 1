@@ -14,3 +14,18 @@
             ------------
                00001
 
+2. Detect if two integers have opposite signs or not
+
+    The expression (x^y) is negative if x and y have opposite signs.
+
+3. Add 1 to a given integer
+
+    The expression -~x will add 1 to a given integer.
+
+4. Swap two numbers without using any third variable
+
+    x = x ^ y
+    y = x ^ y
+    x = x ^ y
+
+    will do this.
