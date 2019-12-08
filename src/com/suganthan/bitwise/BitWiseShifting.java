@@ -25,7 +25,5 @@ public class BitWiseShifting {
         //0010
         //0000 ?? zero is coming
         System.out.println(numTwo>>5);
-
-
     }
 }
